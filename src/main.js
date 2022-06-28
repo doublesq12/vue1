@@ -19,3 +19,11 @@ let countedNames = names.reduce(function (allNames, name) {
   return allNames
 },{})
 console.log(countedNames);
+
+let arr = [{ a: 100 }, { a: 20 }, { a: -10 }]
+let sum = arr.reduce(function (first, item) {
+  return first +item.a
+}, 0)
+console.log(sum);
+
+
