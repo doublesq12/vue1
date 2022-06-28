@@ -26,4 +26,18 @@ let sum = arr.reduce(function (first, item) {
 }, 0)
 console.log(sum);
 
+let str2 = 'http://www.baidu.com?name=zhangsan&age=18&sex=nan#'
+const process = (url) => {
+  const index1 = url.indexOf('?'),
+    index2 = url.indexOf('#'),
+    params = url.slice(index1 + 1, index2).split('&')
+  console.log(params);
+  return params.reduce(function (obj, item) {
+    const [key,value] = item.split('=')
+    obj[key] = value
+    return obj
+  }, {})
+}
+console.log(process(str2));
+
 
